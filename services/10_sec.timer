@@ -1,0 +1,10 @@
+[Unit]
+Description = "Timer for service"
+
+[Timer]
+
+OnBootSec=3min
+
+[Install]
+WantedBy = default.target
+

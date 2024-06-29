@@ -1,0 +1,17 @@
+[Unit]
+Description = Service to run after another service
+After = my_service.service
+
+
+[Service]
+Type=simple
+#NotifyAccess=all
+Restart=on-watchdog
+#WatchdogSec=30
+ExecStart=/home/pratham/Pratham/Linux-User_Space/services/test1
+KillMode=process
+RuntimeMaxSec=30
+
+[Install]
+WantedBy=multi-user.target
+Alias=user_service

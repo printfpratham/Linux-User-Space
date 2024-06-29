@@ -1,0 +1,15 @@
+[Unit]
+Description = wifi
+After = network.target
+
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pratham/Pratham/Linux-User_Space/scripts/
+ExecStart=/home/pratham/Pratham/Linux-User_Space/scripts/wifi.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
+Alias=user_service
+

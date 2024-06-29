@@ -1,0 +1,15 @@
+[Unit]
+Description = This service will run after 10 sec
+After = network.target
+
+
+[Service]
+Type=simple
+ExecStart=/home/pratham/Pratham/Linux-User_Space/services/test2
+KillMode=process
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target
+Alias=user_service
+
